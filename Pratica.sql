@@ -21,7 +21,7 @@ CREATE TABLE "bankAccount" (
 	"id" SERIAL PRIMARY KEY,
 	"customerId" INTEGER REFERENCES "customers"("id"),
     "accountNumber" TEXT NOT NULL UNIQUE , 
-    "agency" TEXT NOT NULL UNIQUE,
+    "agency" TEXT NOT NULL ,
     "openDate" TIMESTAMP NOT NULL DEFAULT NOW() ,
     "closeDate" TIMESTAMP DEFAULT NULL
 );
